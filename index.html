@@ -5,6 +5,14 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>tanyapphotography</title>
+    <script>
+  (function() {
+    var redirect = window.location.search.slice(1);
+    if (redirect.startsWith('p=')) {
+      window.history.replaceState(null, null, redirect.slice(2));
+    }
+  })();
+</script>
   </head>
   <body>
     <div id="root"></div>
